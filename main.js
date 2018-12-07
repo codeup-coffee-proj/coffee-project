@@ -19,9 +19,9 @@ function renderCoffees(coffees) {
     }
     return html;
 }
-
+//This function pushes the coffees that are a particular roast into an array.
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var allRoast = document.getElementById('all-roast').innerHTML;
     // console.log(allRoast);
@@ -39,8 +39,9 @@ function updateCoffees(e) {
 }
 
 var coffeeSearchArray = [];
-
-var coffeeSearch = function(event){
+//This function displays coffees that match the selection if the user
+var coffeeSearch = function(e){
+    userCoffee =  document.getElementById('search-input');
     event.preventDefault();
     userCoffee = userCoffee.value.toLowerCase();
     console.log(userCoffee)
@@ -52,6 +53,7 @@ var coffeeSearch = function(event){
         }
       }
           document.getElementById('coffee-div').innerHTML = coffeeSearchArray + "<br>";
+    coffeeSearchArray = [];
 };
 
 
@@ -85,7 +87,9 @@ var userCoffee =  document.getElementById('search-input');
 
 document.getElementById('coffee-div').innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
 submitButton.addEventListener('click', coffeeSearch);
 
-
+// roastSelection.addEventListener('input', updateCoffees);
+document.addEventListener('DOMContentLoaded', function(event) {
+    document.querySelector('select[name="roast-selection"]').onchange=updateCoffees;
+}, false);
