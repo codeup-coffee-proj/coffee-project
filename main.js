@@ -96,10 +96,10 @@ userCoffee.addEventListener('keyup',function(e){
     for(var i =0; i < coffees.length; i++){
         var lowerCoffee = coffees[i].name.toLowerCase();
         console.log(coffees[i].roast, roastSelection.value);
-        if(lowerCoffee.includes(userCoffee) && (coffees[i].roast === roastSelection.value)) {
+        if(lowerCoffee.includes(userCoffee) && ((roastSelection.value) ===  coffees[i].roast || "all")){
             coffeeSearchArray.push(coffees[i].name + " " + coffees[i].roast)
         }
-    }
+}
     // console.log(userCoffee);
     document.getElementById('coffee-div').innerHTML = coffeeSearchArray;
     coffeeSearchArray = []
