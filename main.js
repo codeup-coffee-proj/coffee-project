@@ -89,6 +89,24 @@ document.getElementById('coffee-div').innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', coffeeSearch);
 
+userCoffee.addEventListener('keyup',function(e){
+    userCoffee =  document.getElementById('search-input');
+    userCoffee = userCoffee.value.toLowerCase();
+    console.log(userCoffee);
+    for(var i =0; i < coffees.length; i++){
+        var lowerCoffee = coffees[i].name.toLowerCase();
+        console.log(coffees[i].roast, roastSelection.value);
+        if(lowerCoffee.includes(userCoffee) && (coffees[i].roast === roastSelection.value)) {
+            coffeeSearchArray.push(coffees[i].name + " " + coffees[i].roast)
+        }
+    }
+    // console.log(userCoffee);
+    document.getElementById('coffee-div').innerHTML = coffeeSearchArray;
+    coffeeSearchArray = []
+    // userCoffee += userCoffee.innerText.value;
+    // console.log(userCoffee.value);
+});
+
 // roastSelection.addEventListener('input', updateCoffees);
 document.addEventListener('DOMContentLoaded', function(event) {
     document.querySelector('select[name="roast-selection"]').onchange=updateCoffees;
