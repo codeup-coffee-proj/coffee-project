@@ -35,7 +35,7 @@ function updateCoffees(e) {
         // console.log(filteredCoffees);
     });
 
-    document.getElementById('coffee-div').innerHTML = renderCoffees(filteredCoffees);
+    document.getElementById('coffee-div').innerHTML = renderCoffees(filteredCoffees) + '<br>';
 }
 
 var coffeeSearchArray = [];
@@ -49,10 +49,14 @@ var coffeeSearch = function(e){
         var lowerCoffee = coffees[i].name.toLowerCase();
         console.log(lowerCoffee)
       if(lowerCoffee.includes(userCoffee)) {
-          coffeeSearchArray.push(coffees[i].name + " " + coffees[i].roast)
+          coffeeSearchArray.push({id: coffees.length+1, name: coffees[i].name, roast: coffees[i].roast});
         }
       }
-          document.getElementById('coffee-div').innerHTML = coffeeSearchArray + "<br>";
+
+console.log(coffeeSearchArray);
+    document.getElementById('coffee-div').innerHTML = '<br>' + renderCoffees(coffeeSearchArray);
+
+
     coffeeSearchArray = [];
 };
 
@@ -89,23 +93,10 @@ document.getElementById('coffee-div').innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', coffeeSearch);
 
-userCoffee.addEventListener('keyup',function(e){
-    userCoffee =  document.getElementById('search-input');
-    userCoffee = userCoffee.value.toLowerCase();
-    console.log(userCoffee);
-    for(var i =0; i < coffees.length; i++){
-        var lowerCoffee = coffees[i].name.toLowerCase();
-        console.log(coffees[i].roast, roastSelection.value);
-        if(lowerCoffee.includes(userCoffee) && ((roastSelection.value) ===  coffees[i].roast || "all")){
-            coffeeSearchArray.push(coffees[i].name + " " + coffees[i].roast)
-        }
-}
-    // console.log(userCoffee);
-    document.getElementById('coffee-div').innerHTML = coffeeSearchArray;
-    coffeeSearchArray = []
-    // userCoffee += userCoffee.innerText.value;
-    // console.log(userCoffee.value);
-});
+userCoffee.addEventListener('keyup',coffeeSearch);
+
+
+
 
 // roastSelection.addEventListener('input', updateCoffees);
 document.addEventListener('DOMContentLoaded', function(event) {
