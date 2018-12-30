@@ -1,0 +1,32 @@
+{
+  "name": "coffee-project",
+  "version": "1.0.0",
+  "description": "Congratulations! You have landed your first development job! You have inherited a project from Fancy Coffee Company&copy;, and they want you to make improvements to it.",
+  "main": "webpack-babel.config.js",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "jquery": "^3.3.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "webpack": "^4.28.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "build:production": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeup-coffee-proj/coffee-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeup-coffee-proj/coffee-project/issues"
+  },
+  "homepage": "https://github.com/codeup-coffee-proj/coffee-project#readme"
+}

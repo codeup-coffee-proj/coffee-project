@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Project</title>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PRETTY TASTY'S</h1>
+        </div>
+        <div class="img-header">
+            <img id="logo" src="../coffee-logo.jpg">
+        </div>
+        <div class="company-info">
+            <h3>PONCE CITY MARKET</h3>
+            <h5>ATLANTA GA.</h5>
+        </div>
+        <div id="coffee-div"></div>
+        <div id="add-coffee-div"></div>
+        <div id="form1">
+            <form>
+                <h4>Search By Roast</h4>
+                <label for="roast-selection"></label>
+                <select id="roast-selection" name="roast-selection">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                    <option id="all-roast" selected>Select All</option>
+                </select>
+                <h4>Search By Coffee Name</h4>
+                <input type="text" id="search-input">
+                <input id="submit" type="submit" value="Search"/>
+            </form>
+        </div>
+         <div id="form2">
+            <form>
+                <h4>Add a Coffee to our Selection</h4>
+                <input id="add-input" type="text" />
+                <label for="add-roast-selection"></label>
+                <select id="add-roast-selection">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+                <input id="add" type="submit" value="Add">
+            </form>
+        </div>
+    </div>
+    <script
+            src="https://code.jquery.com/jquery-2.1.4.min.js"
+            integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+            crossorigin="anonymous"></script>
+    <script src="../src/index.js"></script>
+</body>
+</html>

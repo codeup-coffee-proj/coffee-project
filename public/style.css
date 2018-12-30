@@ -1,0 +1,141 @@
+
+h4 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Fredericka the Great', cursive;
+    letter-spacing: 1.5px;
+}
+
+h5 {
+    color:white;
+    font-family: 'Fredericka the Great', cursive;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 0px #fff, 9px 28px 0px rgba(0,0,0,0.15);
+
+}
+
+h1, h3 {
+    font-weight: bold;
+    color: #1E3063;
+    letter-spacing: 2.5px;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+h1 {
+    letter-spacing: 5px;
+    border: solid #1E3063 3px;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.header {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 23px;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.img-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+div.header {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#search-input, #add-input {
+    border-radius: 5px;
+    font-size: 20px;
+    border: 2px solid #1E3063;
+    color: #1E3063;
+}
+
+#roast-selection, #add-roast-selection {
+    font-size: 20px;
+    border: 2px solid #1E3063;
+}
+
+#add, #submit {
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: white;
+    color: #1E3063;
+    border: 2px solid #1E3063;
+}
+
+#coffee-div {
+    padding-top: 20px;
+    grid-column: 2;
+    grid-row: 2 / 7;
+    font-family: 'monospace';
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+    font-size: 30px;
+    text-align:center;
+}
+
+#add-coffee-div {
+    color: #1E3063;
+    padding-top: 20px;
+    grid-column: 1;
+    grid-row: 2 / 4;
+    font-family: 'monospace';
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+    font-size: 30px;
+    text-align:center;
+}
+
+#form1{
+    grid-column: 3;
+    grid-row: 2 / 3;
+    text-align:right;
+    padding-right: 30px;
+}
+
+#form2{
+    grid-column: 3;
+    grid-row: 3;
+    text-align:right;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../coffee-back.jpg");
+}

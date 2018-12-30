@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function getHighest(arr) {
+            let newArr = [];
+            arr.forEach((a) => {
+                newArr.push(Math.max.apply(null, a));
+        });
+            return newArr;
+        }
+
+        var highestNum = [3, 10, 18, 20];
+
+        function getHighest(num) {
+            return Math.max(num);
+        }
+    </script>
+</body>
+</html>
