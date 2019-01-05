@@ -7,3 +7,25 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+body {
+    background-image: url("images/aerial-beverage-caffeine-972533.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.page-header{
+    text-align: center;
+    font-size: 15rem;
+    font-family: 'Abril Fatface', cursive;
+    color: rgba(24, 24, 24, 0.96);
+}
+
+#coffee-div{
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.coffee-selector{
+    text-align: center;
+}

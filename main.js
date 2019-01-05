@@ -48,12 +48,12 @@ var coffeeSearch = function(e){
     for(var i =0; i < coffees.length; i++){
         var lowerCoffee = coffees[i].name.toLowerCase();
         console.log(lowerCoffee)
-      if(lowerCoffee.includes(userCoffee)) {
-          coffeeSearchArray.push({id: coffees.length+1, name: coffees[i].name, roast: coffees[i].roast});
+        if(lowerCoffee.includes(userCoffee)) {
+            coffeeSearchArray.push({id: coffees.length+1, name: coffees[i].name, roast: coffees[i].roast});
         }
-      }
+    }
 
-console.log(coffeeSearchArray);
+    console.log(coffeeSearchArray);
     document.getElementById('coffee-div').innerHTML = '<br>' + renderCoffees(coffeeSearchArray);
 
 
